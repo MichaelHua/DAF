@@ -1,5 +1,5 @@
 /*
-  Based on cangle.h @ SparQ
+  Based on cangle.h @SparQ https://github.com/dwolter/SparQ
 */
 
 #ifndef ANGLE_H
