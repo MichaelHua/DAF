@@ -110,6 +110,13 @@ if [ "$COM_TEST" = 1 ]; then
   ./daf -m 4 -com -ot IAA -rs "(I,15,1)(A,0,2)(P,0,5)"
   ./daf -m 4 -com -ot AIA -rs "(A,15,1)(I,0,2)(P,0,5)"
 
+  ./daf -m 4 -com -ot AIR -rs "(A,15,1)(I,0,2)(P,0,5)"
+  ./daf -m 4 -com -ot ARI -rs "(A,15,1)(R,0,2)(P,0,5)"
+  ./daf -m 4 -com -ot IAR -rs "(I,15,1)(A,0,2)(P,0,5)"
+  ./daf -m 4 -com -ot IRA -rs "(I,15,1)(R,0,2)(P,0,5)"
+  ./daf -m 4 -com -ot RAI -rs "(R,15,1)(A,0,2)(P,0,5)"
+  ./daf -m 4 -com -ot RIA -rs "(R,15,1)(I,0,2)(P,0,5)"
+
   ./daf -m 4 -com -ot AII -rs "(A,15,1)(A,0,2)(P,0,5)(P,0,5)"
   ./daf -m 4 -com -ot IIA -rs "(I,15,1)(I,0,2)(P,0,5)(P,0,5)"
   ./daf -m 4 -com -ot IAI -rs "(I,15,1)(A,0,2)(P,0,5)(P,0,5)"

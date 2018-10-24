@@ -32,6 +32,13 @@ Rel b_com_aai(B_rel, B_rel, B_rel);
 Rel b_com_iaa(B_rel, B_rel, B_rel);
 Rel b_com_aia(B_rel, B_rel, B_rel);
 
+Rel b_com_air(B_rel, B_rel, B_rel);
+Rel b_com_ari(B_rel, B_rel, B_rel);
+Rel b_com_iar(B_rel, B_rel, B_rel);
+Rel b_com_ira(B_rel, B_rel, B_rel);
+Rel b_com_rai(B_rel, B_rel, B_rel);
+Rel b_com_ria(B_rel, B_rel, B_rel);
+
 Rel b_com_aii(B_rel, B_rel, B_rel, B_rel);
 Rel b_com_iia(B_rel, B_rel, B_rel, B_rel);
 Rel b_com_iai(B_rel, B_rel, B_rel, B_rel);

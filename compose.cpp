@@ -115,6 +115,30 @@ Rel compose(Rel r1, Rel r2, Rel r3, com_type type) {
         if (type == IAA) {
           result = cup(result, apply_b_com(b_com_iaa, r1_bRel, r2_bRel, r3_bRel));
         }
+
+        if (type == AIR) {
+          result = cup(result, apply_b_com(b_com_air, r1_bRel, r2_bRel, r3_bRel));
+        }
+
+        if (type == ARI) {
+          result = cup(result, apply_b_com(b_com_ari, r1_bRel, r2_bRel, r3_bRel));
+        }
+
+        if (type == IAR) {
+          result = cup(result, apply_b_com(b_com_iar, r1_bRel, r2_bRel, r3_bRel));
+        }
+
+        if (type == IRA) {
+          result = cup(result, apply_b_com(b_com_ira, r1_bRel, r2_bRel, r3_bRel));
+        }
+
+        if (type == RAI) {
+          result = cup(result, apply_b_com(b_com_rai, r1_bRel, r2_bRel, r3_bRel));
+        }
+
+        if (type == RIA) {
+          result = cup(result, apply_b_com(b_com_ria, r1_bRel, r2_bRel, r3_bRel));
+        }
       }
     }
   }

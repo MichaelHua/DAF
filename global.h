@@ -23,6 +23,7 @@ enum com_type {Tau, // direction relation translation
   AAA, III, RRR, // in-category composition
   AAR, ARA, RAA, IRI, RII, // translation-independent across-category
   AIA, AII, AAI, IIA, IAA, IAI, IIR, // translation-dependent across-category
+  AIR, ARI, IAR, IRA, RAI, RIA,// translation-dependent across-category
   RRA, ARR, RAR, RRI, IRR, RIR, // non-informative
   P, // anchor relation composition
   P_i, // anchor relation inference

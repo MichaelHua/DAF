@@ -240,7 +240,7 @@ Rel b_com_aai(B_rel r1, B_rel r2, B_rel r3) {
 }
 
 Rel b_com_iaa(B_rel r1, B_rel r2, B_rel r3) {
-  // from I_ab_i to A_ab_i' based on Rule 2 of Proposition 5.
+  // from I to A based on Rule 2 of Proposition 5.
   Rel r1_prime = b_com_tau(r1, r3, IA);
   vector<B_rel> bRels = r1_prime.getBRels();
 
@@ -254,7 +254,7 @@ Rel b_com_iaa(B_rel r1, B_rel r2, B_rel r3) {
 }
 
 Rel b_com_aia(B_rel r1, B_rel r2, B_rel r3) {
-  // from I_bc_j to A_bc_j' based on Rule 2 of Proposition 5.
+  // from I to A based on Rule 2 of Proposition 5.
   Rel r2_prime = b_com_tau(r2, r3, IA);
   vector<B_rel> bRels = r2_prime.getBRels();
 
@@ -267,8 +267,93 @@ Rel b_com_aia(B_rel r1, B_rel r2, B_rel r3) {
   return result;
 }
 
+Rel b_com_air(B_rel r1, B_rel r2, B_rel r3) {
+  // from I to A based on Rule 2 of Proposition 5.
+  Rel r2_prime = b_com_tau(r2, r3, IA);
+  vector<B_rel> bRels = r2_prime.getBRels();
+
+  Rel result;
+
+  for (auto it = bRels.begin(); it != bRels.end(); it++) {
+    result = cup(result, b_com_aar(r1, (*it)));
+  }
+
+  return result;
+}
+
+Rel b_com_ari(B_rel r1, B_rel r2, B_rel r3) {
+  Rel r_a = b_com_ara(r1, r2);
+  vector<B_rel> bRels = r_a.getBRels();
+
+  Rel result;
+
+  for (auto it = bRels.begin(); it != bRels.end(); it++) {
+    // from A to I based on Rule 1 of Proposition 5.
+    result = cup(result, b_com_tau((*it), r3, AI));
+  }
+
+  return result;
+}
+
+Rel b_com_iar(B_rel r1, B_rel r2, B_rel r3) {
+  // from I to A based on Rule 2 of Proposition 5.
+  Rel r1_prime = b_com_tau(r1, r3, IA);
+  vector<B_rel> bRels = r1_prime.getBRels();
+
+  Rel result;
+
+  for (auto it = bRels.begin(); it != bRels.end(); it++) {
+    result = cup(result, b_com_aar((*it), r2));
+  }
+
+  return result;
+}
+
+Rel b_com_ira(B_rel r1, B_rel r2, B_rel r3) {
+  // from I to A based on Rule 2 of Proposition 5.
+  Rel r1_prime = b_com_tau(r1, r3, IA);
+  vector<B_rel> bRels = r1_prime.getBRels();
+
+  Rel result;
+
+  for (auto it = bRels.begin(); it != bRels.end(); it++) {
+    result = cup(result, b_com_ara((*it), r2));
+  }
+
+  return result;
+}
+
+Rel b_com_rai(B_rel r1, B_rel r2, B_rel r3) {
+  Rel r_a = b_com_raa(r1, r2);
+  vector<B_rel> bRels = r_a.getBRels();
+
+  Rel result;
+
+  for (auto it = bRels.begin(); it != bRels.end(); it++) {
+    // from A to I based on Rule 1 of Proposition 5.
+    result = cup(result, b_com_tau((*it), r3, AI));
+  }
+
+  return result;
+}
+
+Rel b_com_ria(B_rel r1, B_rel r2, B_rel r3) {
+  // from I to A based on Rule 2 of Proposition 5.
+  Rel r2_prime = b_com_tau(r2, r3, IA);
+  vector<B_rel> bRels = r2_prime.getBRels();
+
+  Rel result;
+
+  for (auto it = bRels.begin(); it != bRels.end(); it++) {
+    // from A to I based on Rule 1 of Proposition 5.
+    result = cup(result, b_com_raa(r1, (*it)));
+  }
+
+  return result;
+}
+
 Rel b_com_aii(B_rel r1, B_rel r2, B_rel r3, B_rel r4) {
-  // from I_bc_j to A_bc_j' based on Rule 2 of Proposition 5.
+  // from I to A based on Rule 2 of Proposition 5.
   Rel r2_prime = b_com_tau(r2, r3, IA);
   vector<B_rel> bRels = r2_prime.getBRels();
 
@@ -306,9 +391,7 @@ Rel b_com_iia(B_rel r1, B_rel r2, B_rel r3, B_rel r4) {
 
 Rel b_com_iai(B_rel r1, B_rel r2, B_rel r3, B_rel r4) {
   Rel r1_prime = b_com_tau(r1, r3, IA);
-  // Rel r2_prime = b_com_tau(r2, r4, IA);
   vector<B_rel> bRels = r1_prime.getBRels();
-  // vector<B_rel> r2_bRels = r2_prime.getBRels();
   Rel result_in_a;
 
   for (auto it = bRels.begin(); it != bRels.end(); it++) {

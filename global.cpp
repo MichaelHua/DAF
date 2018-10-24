@@ -70,6 +70,13 @@ com_type string_to_com_type(string str) {
   if (equal(str, "P")) return P;
   if (equal(str, "P_i")) return P_i;
 
+  if (equal(str, "AIR")) return AIR;
+  if (equal(str, "ARI")) return ARI;
+  if (equal(str, "IAR")) return IAR;
+  if (equal(str, "IRA")) return IRA;
+  if (equal(str, "RAI")) return RAI;
+  if (equal(str, "RIA")) return RIA;
+
   return COM_TYPE_ERROR;
 }
 
@@ -92,7 +99,7 @@ t_con string_to_t_con(string str) {
   if (equal(str, "SC")) return SC;
   if (equal(str, "SCI")) return SCI;
   if (equal(str, "HM")) return HM;
-  if (equal(str, "HMI")) return HMI; 
+  if (equal(str, "HMI")) return HMI;
 
   return T_CON_ERROR;
 }

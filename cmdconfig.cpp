@@ -23,7 +23,7 @@ void cmd_show (string keyword, string content, int m) {
 
 void cmd_format_error (string keyword, int m) {
   show("[" + NAME + "_" + to_string(m) + "][" + keyword + "] " +
-    "wrong format. For more help use --help or -h.");
+    "wrong format. For help use --help or -h.");
 }
 
 void do_qualify(cli::Parser& parser, int m) {
@@ -208,7 +208,9 @@ void do_compose(cli::Parser& parser, int m) {
   }
 
   if (equal(ot, "III") || equal(ot, "AIA") || equal(ot, "AAI")
-    || equal(ot, "AAI") || equal(ot, "IAA")) {
+    || equal(ot, "AAI") || equal(ot, "IAA") || equal(ot, "AIR")
+    || equal(ot, "ARI") || equal(ot, "IAR") || equal(ot, "IRA")
+    || equal(ot, "RAI") || equal(ot, "RIA")) {
 
     if ((int) rels.size() == 3) {
       Rel r1 = rels.at(0);
@@ -277,14 +279,15 @@ void configure_parser(cli::Parser& parser) {
   parser.set_optional<bool>("com", "compose", false, "Get the" \
     " composition of two relations. Types available are as follows.\n"
     "   1. In-category (arity in brackets): AAA(2), III(3), RRR(2,"\
-    " subtypes: R_31,\n      R_32);"\
+    " subtypes: R_31,\n      R_32)."\
     "\n   2. Translation-independent across-category:"\
-    " AAR(2), ARA(2), RAA(2), IRI(2),\n      RII(2); "\
+    " AAR(2), ARA(2), RAA(2), IRI(2),\n      RII(2). "\
     "\n   3. Translation-dependent across-category: AIA (3), AII (4), "\
-    "AAI (3),\n      IIA(4), IAA(3), IAI(4), IIR(4);"\
+    "AAI (3), IIA(4),\n      IAA(3), IAI(4), IIR(4), AIR(3), ARI(3), IAR(3),"\
+    "IRA(3), RAI(3), RIA(3)."
     "\n   4. Non-informative across category: RRA, ARR, RAR, RRI, IRR,"\
-    " RIR;\n   5. Direction relation translation: Tau(2, subtypes: AI, IA, II,"\
-    " AR, RA, IR,\n      RI); \n   6. Anchor relation composition: P(2);"\
+    " RIR.\n   5. Direction relation translation: Tau(2, subtypes: AI, IA, II,"\
+    " AR, RA, IR,\n      RI); \n   6. Anchor relation composition: P(2)."\
     " \n   7. Anchor relation inference: P_i(2).\n");
 
   parser.set_optional<string>("ot", "operationType", "NULL", "Input" \

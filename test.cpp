@@ -720,6 +720,32 @@ void com_test() {
   print_result("_", compose(r_A_15_to_1, r_I_0_to_2, r_P_15_to_1, AIA).getStr());
   print_result("_", compose(r_A_15_to_1, r_I_1_to_2, r_P_0_to_5, AIA).getStr());
 
+  print_line_break("AIR");
+
+  print_result("_", compose(r_A_15_to_1, r_I_0_to_2, r_P_0_to_5, AIR).getStr());
+  print_result("_", compose(r_A_15_to_1, r_I_0_to_2, r_P_15_to_1, AIR).getStr());
+  print_result("_", compose(r_A_15_to_1, r_I_1_to_2, r_P_0_to_5, AIR).getStr());
+
+  print_result("_", compose(r_A_15_to_1, r_R_0_to_2, r_P_0_to_5, ARI).getStr());
+  print_result("_", compose(r_A_15_to_1, r_R_0_to_2, r_P_15_to_1, ARI).getStr());
+  print_result("_", compose(r_A_15_to_1, r_R_1_to_2, r_P_0_to_5, ARI).getStr());
+
+  print_result("_", compose(r_I_15_to_1, r_A_0_to_2, r_P_0_to_5, IAR).getStr());
+  print_result("_", compose(r_I_15_to_1, r_A_0_to_2, r_P_15_to_1, IAR).getStr());
+  print_result("_", compose(r_I_15_to_1, r_A_1_to_2, r_P_0_to_5, IAR).getStr());
+
+  print_result("_", compose(r_I_15_to_1, r_R_0_to_2, r_P_0_to_5, IRA).getStr());
+  print_result("_", compose(r_I_15_to_1, r_R_0_to_2, r_P_15_to_1, IRA).getStr());
+  print_result("_", compose(r_I_15_to_1, r_R_1_to_2, r_P_0_to_5, IRA).getStr());
+
+  print_result("_", compose(r_R_15_to_1, r_A_0_to_2, r_P_0_to_5, RAI).getStr());
+  print_result("_", compose(r_R_15_to_1, r_A_0_to_2, r_P_15_to_1, RAI).getStr());
+  print_result("_", compose(r_R_15_to_1, r_A_1_to_2, r_P_0_to_5, RAI).getStr());
+
+  print_result("_", compose(r_R_15_to_1, r_I_0_to_2, r_P_0_to_5, RIA).getStr());
+  print_result("_", compose(r_R_15_to_1, r_I_0_to_2, r_P_15_to_1, RIA).getStr());
+  print_result("_", compose(r_R_15_to_1, r_I_0_to_5, r_P_0_to_5, RIA).getStr());
+
   print_line_break();
 
   // translation dependent compositions (two translations)
@@ -771,8 +797,7 @@ int main(int argc, char* argv[]) {
   // tests for composition of basic relations
   b_com_test();
   // tests for composition of composite relations
-  com_test();
-  */
+  com_test();*/
 
   // test of command line input parser.
   cmd_parser_test(argc, argv);
