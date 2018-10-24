@@ -17,78 +17,7 @@
 #include "cmdparser.hpp"
 #include "cmdconfig.h"
 
-
 using namespace std;
-
-/*
-******************************* TO-DOs **********************************
-1. Start DAF-m Qualification. (Copied from OPRA first)
-
-1.1 Basic Relations (only Absolute Relations and Binary Same Relations).
-
-1.2 Add Anchor Relations.
-1.3 Add Intrinsic Relations.
-1.4 Add Ternary. Relative Relations and Ternary Same Relations.
-
-DONE Any problem with normalisation?
-DONE But problematic when there are rounding errors...
-DONE Function tests...
-DONE (in daf.cpp) generate basic relations
-
-2. DAF-m Converse from OPRA converse?
-DONE refactor daf_qualifier with new basic relations and rel_cate
-
-DONE a seperate file for converse operations of baisc and non-basic rels....
-
-3. DAF-m Composition from OPRA composition?
-
-DONE // different types of composition operations
-enum com_type {
-  DONE Tau, // direction relation translation
-  DONE AAA, III, RRR, // in-category composition
-  DONE AAR, ARA, RAA, IRI, RII, // trans-independent across-category
-  DONE AIA, AII, AAI, IIA, IAA, IAI, IIR, // trans-dependent across-category
-  TODO AIR, ARI, IAR, IRA, RAI, RIA // trans-dependent across-category
-  DONE RRA, ARR, RAR, RRI, IRR, RIR, // non-informative
-  Phi
-};
-
-4. Operations between composite relations
-DONE set operations
-DONE converse and compose
-DONE tests
-
-5. DONE Command line input (if too complicated in the future I can use boost)
-now just keep it simple. Also you can refer to the dsitributed system
-project code.
-
-6. DONE At least you can run the case study (hare shooting).
-******************************* TO-DOs **********************************
-
-
-************************ Potential TO-DOs ***************************
-how to deal with unknown anchors or positions?
-
-file input?
-
-how to prove my rules are correct? combined with Qualification? Manually
-check the results? How to prove my rules are correct?
-
-error handling? check whether inputs are valid? At least you should check
-whether relation types match the composition type.
-
-For qualification Interval input... rather than exact points...
-e.g. x ([1,2], [2,3], 0). In other words, results are rels rather than b_rels.
-Check how SparQ does with this problem?
-
-check the logic and process of norm_seg?
-
-Before uploading to Github, refactor the structure of this project
-so that it is more readable?
-************************ Potential TO-DOs ***************************
-
-*/
-
 
 void print_result(string expected, string result) {
   cout << expected << " ----> " << result << endl;

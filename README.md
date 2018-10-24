@@ -1,10 +1,11 @@
+To compile: make && make clean
+
 To use: ./daf -h
 
-To test: test.sh
-
-To recompile: make
+To test: bash test.sh
 
 ---------------------------------------------------------------------------
+
 This is the first implementation of DAF_m from
 
 "Qualitative Representation and

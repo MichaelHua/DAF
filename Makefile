@@ -6,12 +6,10 @@ OBJECTS = test.o daf.o qualifier.o ori_point.o global.o angle.o \
 all:daf
 
 daf:$(OBJECTS)
-# use TAB rather than space...
 	$(CC) $(OBJECTS) -o $@
 
 .cpp.o:
 	$(CC) $(CFLAGS) -c $<
-# another way: "%.o: %.cpp" single-suffix
 
 clean:
 	rm -rf *.o

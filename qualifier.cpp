@@ -1,5 +1,5 @@
 /*
-  Based on qualifier.cpp @ SparQ
+  Based on qualifier.cpp @SparQ https://github.com/dwolter/SparQ
 */
 
 #include <iostream>

@@ -1,5 +1,5 @@
 /*
-  Revised from point.h @ SparQ
+  Revised from point.h @SparQ https://github.com/dwolter/SparQ
 */
 
 #ifndef ORI_POINT_H

@@ -157,28 +157,4 @@ string Rel::getStr(void) {
 
     return str;
   }
-}
-
-
-/*
-string Rel::getStr(void) {
-  if (isEmpty()) {
-    return "EMPTY";
-  }
-
-  if (getBRels().size() == (unsigned) 4 * m) { // universal relation
-    return  "{" + config::str_cate[getCate()] + "_U}";
-  } else {
-
-    sortBRels();
-
-    string str = "{";
-    for (auto it = bRels.begin(); it != bRels.end(); it++) {
-      str += (*it).getStr() + ", ";
-    }
-    str = str.substr(0, str.length() - 2);
-    str += "}";
-
-    return str;
-  }
-} */
+} 

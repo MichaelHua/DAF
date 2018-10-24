@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 // get same position relations
 B_rel getSamePosRel(int m, OriPoint opA, OriPoint opB);
 B_rel getSamePosRel(int m, OriPoint opA, OriPoint opB, OriPoint opC);

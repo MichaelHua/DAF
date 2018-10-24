@@ -1,5 +1,5 @@
 /*
-  Based on point.h @ SparQ
+  Based on point.h @SparQ https://github.com/dwolter/SparQ
 */
 
 #include "ori_point.h"
@@ -122,25 +122,3 @@ const float OriPoint::GetAngleTo(const OriPoint &p2) const
 void OriPoint::rotateANCHOR(const float delta) {
   anchor = norm(anchor + delta);
 }
-
-/*
-int main() {
-  cout << "oriented point class test ----->" << endl;
-
-  OriPoint opA(1, 0, M_PI/2);
-  OriPoint opB(1, 1, M_PI/2);
-  OriPoint opOrigin(0, 0, M_PI/2);
-
-  cout << "opA: " << opA.toString() << endl;
-  cout << "opB: " << opB.toString() << endl;
-  cout << "same pos? " << opB.samePos(opA) << endl;
-
-  // opB.shift(opOrigin.getX() - opA.getX(), opOrigin.getY()-opA.getY());
-  opB.shift(opOrigin - opA);
-  cout << "opB: " << opB.toString() << endl;
-  opB.rotate(-opA.getANCHOR());
-  cout << "opB: " << opB.toString() << endl;
-
-  cout << "opB: " << opB.samePos(opA) << endl;
-
-}*/

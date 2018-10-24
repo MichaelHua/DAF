@@ -7,8 +7,6 @@ using namespace std;
 Daf::Daf(const int _m) {
   m = _m;
   initBRels();
-
-  // cout << "Daf_" << m << "!" << endl;
 }
 
 void Daf::initBRels(void) {
